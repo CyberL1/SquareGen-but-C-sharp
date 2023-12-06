@@ -7,14 +7,24 @@ namespace SquareGen_but_C_sharp
         static void Main(string[] args)
         {
             Console.WriteLine("Provide height");
-            int width = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Provide width");
             int height = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < width; i++)
+            if (height < 1)
             {
-                for (int j = 0; j < height; j++)
+                Console.WriteLine("Height cannot be negative or zero");
+            }
+
+            Console.WriteLine("Provide width");
+            int width = Convert.ToInt32(Console.ReadLine());
+
+            if (width < 1)
+            {
+                Console.WriteLine("Width cannot be negative or zero");
+            }
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
                 {
                     Console.Write("#");
                 }
